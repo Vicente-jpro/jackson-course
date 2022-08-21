@@ -6,7 +6,18 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-MiningType.create!([
+15.times do |number| 
+	User.find_or_create_by!(
+		email: "vicente#{number}@gmail.com",
+		status: 1, 
+		password: "Vicente",
+   		password_confirmation: "Vicente"
+
+	)
+end
+
+
+MiningType.find_or_create_by!([
 	  {
 		description: "ANGOLA",
 		acronym: "KZ"
@@ -25,7 +36,7 @@ MiningType.create!([
 	  }
 ])
 
-Coin.create!([
+Coin.find_or_create_by!([
 	  {
 		description: "Kwanza",
 		acronym: "KZ",
