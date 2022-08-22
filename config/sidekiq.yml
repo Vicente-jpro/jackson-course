@@ -6,6 +6,8 @@
 #   {"redis_version"=>"X.X.X",
 #     ...
 
+
+# Clean UI Sidekiq Monitoring. First run 'rails c' then run 'Sidekiq.redis { |conn| conn.flushdb }'
 --- 
 :concurrency: 5
 staging:
