@@ -3,7 +3,7 @@ class CoinsController < ApplicationController
 
   # GET /coins or /coins.json
   def index
-    @coins = Coin.all
+    @coins = Coin.eager_load(:mining_type)
   end
 
   # GET /coins/1 or /coins/1.json
